@@ -1,0 +1,1 @@
+select concat(LastName, FirstName) as lol from employees
