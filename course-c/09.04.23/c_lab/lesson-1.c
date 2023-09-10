@@ -162,6 +162,73 @@ void CheckTriangle(int a, int b, int c)
     }
 }
 
+/// @brief sort the vals in between themselves, such that a will have the lowest value, b the second lowest and so on.
+/// @param a sorted to be the lowest value.
+/// @param b sorted to be the second lowest value.
+/// @param c sorted to be the third lowest value.
+/// @param d sorted to be the highest value.
+void SortVals(int a, int b, int c, int d)
+{
+    int temp;
+
+    if(a > b)
+    {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+
+    if(a > c)
+    {
+        temp = a;
+        a = c;
+        c = temp;
+    }
+
+    if(a > d)
+    {
+        temp = a;
+        a = d;
+        d = temp;
+    }
+
+    if(b > c)
+    {
+        temp = b;
+        b = c;
+        c = temp;
+    }
+
+    if(b > d)
+    {
+        temp = b;
+        b = d;
+        d = temp;
+    }
+
+    if(c > d)
+    {
+        temp = c;
+        c = d;
+        d = temp;
+    }
+
+    printf("%d, %d, %d, %d\n", a, b, c, d);
+}
+
+/// @brief same as SortVals but the values are user inputed.
+/// @param year 
+void IsLeapYear(int year)
+{
+    if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+    {
+        printf("leap year\n");
+    }
+    else
+    {
+        printf("not a leap year\n");
+    }
+}
 
 
 int main()
