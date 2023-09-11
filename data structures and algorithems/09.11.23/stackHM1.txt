@@ -1,0 +1,156 @@
+problems at the end of the page:
+
+1.
+reset stack -> stk
+
+scan char -> ch
+// check if first char is not A or B, if it isn't the string is not in L1
+if !(ch = 'A' or ch = 'B'):
+    return false
+
+// push x into stk
+while ch = 'A' or ch = 'B':
+    push(stk, ch)
+    scan char -> ch
+
+// if C is not after x the string is not in L1
+if ch != 'C':
+    return false
+
+// pop stk until stk is empty or the top is not equal to the scanned char
+scan char -> ch
+while pop(stk) = ch and !isEmpty(stk):
+    scan char -> ch
+
+// if stk is empty, y = x^r which means the string is part of L1
+if isEmpty(stk):
+    return true
+
+return false
+
+2.
+reset stack -> stk1
+reset stack -> stk2
+
+while there are characters to input:
+    push(stk1, scan char)
+    counter++
+
+for floor(counter/2):
+    push(stk2, pop(stk1))
+if counter % 2 == 1:
+    pop(stk1)
+
+while !isEmpty(stk1) and !isEmpty(stk2):
+    if pop(stk1) != pop(stk2):
+        return false
+
+if isEmpty(stk1) and isEmpty(stk2):
+    return true
+return false
+
+3.
+reset stack -> stk
+
+scan char -> ch
+while ch != '.':
+    push(stk, ch)
+    scan char -> ch
+
+flip(stk)
+
+scan char -> ch
+while ch = pop(stk):
+    scan char -> ch
+
+if isEmpty(stk):
+    return true
+return false
+
+4.
+reset stack -> stk1
+reset stack -> stk2
+
+scan char -> ch
+// check if first char is not A or B, if it isn't the string is not in L2
+if !(ch = 'A' or ch = 'B'):
+    return false
+
+// push x into stk1
+while ch = 'A' or ch = 'B':
+    push(stk1, ch)
+    scan char -> ch
+
+// if C is not after x the string is not in L1
+if ch != 'C':
+    return false
+
+counter++
+
+while there is characters to scan:
+    if isEmpty(stk2):
+        scan char -> ch
+        while ch = top(stk1)
+            push(stk2, pop(stk1))
+            scan char -> ch
+        
+        if ch != 'C':
+            return false
+        counter++
+
+    else if isEmpty(stk1):
+        scan char -> ch
+        while ch = top(stk2):
+            push(stk1, pop(stk2))
+            scan char -> ch
+
+        if ch != 'C':
+            return false
+        counter++
+    
+    else
+        return false
+
+if (isEmpty(stk1) xor isEmpty(stk2)) and counter = 2:
+    return true
+return false
+
+
+problems at other slides:
+
+2.
+
+ b
+ a     c
+stk1  stk2
+
+ch = b
+
+       b
+ a     c
+stk1  stk2
+
+ch = a
+
+       b
+       c
+stk1  stk2
+
+isEmpty(stk1) -> true
+
+isEmpty(stk2) -> false
+    b
+
+3.
+
+line
+stk
+
+4.
+pop(S) -> max
+
+while !isEmpty(S)
+    pop(S) -> x
+    if x > max:
+        x -> max
+    

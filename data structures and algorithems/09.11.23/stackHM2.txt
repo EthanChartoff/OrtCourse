@@ -1,0 +1,53 @@
+problems at other slides:
+1.
+ValueInDepth(S, k):
+    reset stack -> tmp
+
+    for k - 1:
+        push(tmp, pop(S))
+    
+    top(S) -> output
+
+    for k - 1:
+        push(S, pop(tmp))
+
+    return output
+
+problems at the end of the page:
+
+1.
+reset stack -> stk
+
+for n:
+    scan number -> num
+
+    if isEmpty(stk):
+        push(stk, num)
+    
+    else:
+        if num < top(stk):
+            pop(stk) -> tmp
+            push(stk, num)
+            push(stk, tmp)
+        
+        else:
+            push(stk, num)
+
+2. 
+reset stack -> S3
+
+while !isEmpty(S1) or !isEmpty(S2):
+    if isEmpty(S1):
+        push(S3, pop(S2))
+    
+    else if isEmpty(S2):
+        push(S3, pop(S1))
+
+    else:
+        if top(S1) > top(S2):
+            push(S3, pop(S1))
+        else
+            push(S3, pop(S2))
+
+return flip(S3)
+
