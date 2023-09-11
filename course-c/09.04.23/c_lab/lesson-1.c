@@ -233,5 +233,5 @@ void IsLeapYear(int year)
 
 int main()
 {
-    return InputFindMax();
+    return InputSecondsToHMS();
 }
