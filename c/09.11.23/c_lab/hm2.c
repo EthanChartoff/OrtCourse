@@ -457,5 +457,5 @@ void P14()
 
 int main()
 {
-    P14();
+    return 0;
 }
