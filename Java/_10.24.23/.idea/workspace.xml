@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c6bb746-dde0-4208-b7dd-eeb06f818e8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../8086 asm/23.10.23/exe1.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../8086 asm/23.10.23/hello.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../8086 asm/23.10.23/תרגיל 4 סביבת עבודה.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../polymorphism_part2/src/part1/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../polymorphism_part2/src/part1/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../polymorphism_part2/src/part1/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../polymorphism_part2/src/part1/Sales.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../polymorphism_part2/src/part1/SeniorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../polymorphism_part2/src/part1/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/09.27.23/hm3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/09.27.23/hm3.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/09.27.23/תרגיל מספר 2 - מחובר.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/10.24.23/calculator_stack/calculator_stack.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/10.24.23/calculator_stack/calculator_stack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/10.24.23/hm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/10.24.23/stack_hm2.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/10.24.23/מבני_נתונים_הרמלין_דף_תרגילים_מחסנית2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data structures and algorithems/09.27.23/paper 1/answers.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data structures and algorithems/09.27.23/paper 1/תרגול_מחסנית דף 3 שפוך - תעלומה תשפד הרמלין.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data structures and algorithems/10.1.23/answers.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../data structures and algorithems/10.1.23/תרגיל 3 משלים ל2 וזיכרון.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/10.17.23/HM4.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/stack.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/stack.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/stack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/09.11.23.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_1/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_1/Cow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_2/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_2/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_2/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_2/Sales.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_2/SeniorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/src/part_2/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/09.11.23/hm2/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/course-java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/day - 09.04.23.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/src/Banker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/src/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/src/Saver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/day - 09.04.23/src/SavingAccount.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2XE81Zoqk509X3g3xy9kGSKR9om" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c6bb746-dde0-4208-b7dd-eeb06f818e8f" name="Changes" comment="" />
+      <created>1698182665901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698182665901</updated>
+    </task>
+    <servers />
+  </component>
+</project>

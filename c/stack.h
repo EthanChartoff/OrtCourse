@@ -1,16 +1,13 @@
-#ifndef STACK_MAX_SIZE 
+#ifndef STACK_MAX_SIZE
 #define STACK_MAX_SIZE 100
 #endif
 
+typedef int stack_item;	 // type of data in stack
 
-typedef int stack_item; // type of data in stack
-
-typedef struct
-{
-    int top;
-    stack_item data[STACK_MAX_SIZE];
+typedef struct {
+	int top;
+	stack_item data[STACK_MAX_SIZE];
 } Stack;
-
 
 void stack_init(Stack *s);
 
