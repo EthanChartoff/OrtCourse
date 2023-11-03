@@ -4,63 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da31fa3b-2780-4ec1-b612-bcd6a6ae4105" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../8086 asm/23.10.23/exe1.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../8086 asm/23.10.23/hello.asm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../8086 asm/23.10.23/תרגיל 4 סביבת עבודה.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/09.27.23/hm3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/09.27.23/hm3.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/09.27.23/תרגיל מספר 2 - מחובר.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/10.24.23/calculator_stack/calculator_stack.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/10.24.23/calculator_stack/calculator_stack.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/10.24.23/hm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/10.24.23/stack_hm2.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../c/10.24.23/מבני_נתונים_הרמלין_דף_תרגילים_מחסנית2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data structures and algorithems/09.27.23/paper 1/answers.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data structures and algorithems/09.27.23/paper 1/תרגול_מחסנית דף 3 שפוך - תעלומה תשפד הרמלין.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data structures and algorithems/10.1.23/answers.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data structures and algorithems/10.1.23/תרגיל 3 משלים ל2 וזיכרון.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sql/10.17.23/HM4.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c/stack.c" beforeDir="false" afterPath="$PROJECT_DIR$/../c/stack.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c/stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/../c/stack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/09.11.23.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_1/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_1/Cow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_2/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_2/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_2/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_2/Sales.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_2/SeniorManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/src/part_2/Worker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/09.11.23/hm2/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/course-java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/day - 09.04.23.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/src/Banker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/src/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/src/Saver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/day - 09.04.23/src/SavingAccount.java" beforeDir="false" />
-    </list>
+    <list default="true" id="da31fa3b-2780-4ec1-b612-bcd6a6ae4105" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,20 +13,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2XE4cvKWU7B72bLpSUDXtg4ZutI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="10.24.23.part1" />
