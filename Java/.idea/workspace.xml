@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da31fa3b-2780-4ec1-b612-bcd6a6ae4105" name="Changes" comment="" />
+    <list default="true" id="da31fa3b-2780-4ec1-b612-bcd6a6ae4105" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Collections/src/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collections/src/ColoredCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collections/src/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StepIterator/StepIterator.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StepIterator/src/StepIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +33,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/goodman/School/ort-technician/Java&quot;
   }
 }</component>
   <component name="RecentsManager">

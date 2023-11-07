@@ -1,7 +1,5 @@
 {
     "files.associations": {
-        "calculator_stack.h": "c",
-        "stack.h": "c",
         "stdio.h": "c"
     }
 }
