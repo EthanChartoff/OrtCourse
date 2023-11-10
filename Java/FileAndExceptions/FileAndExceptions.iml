@@ -7,5 +7,20 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Software/jars/commons-lang3-3.13.0" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$USER_HOME$/Software/jars/commons-lang3-3.13.0/apidocs" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Software/jars/commons-lang3-3.13.0" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Software/jars/commons-lang3-3.13.0" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Software/jars/commons-lang3-3.13.0" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
