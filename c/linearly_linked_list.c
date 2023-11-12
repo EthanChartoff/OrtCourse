@@ -1,54 +1,54 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "linked_list.h"
+#include "linearly_linked_list.h"
 
 /// @brief initialize list.
 /// @param n 
-void list_init(node **n) {
+void list_init(Node **n) {
     *n = NULL;
 }
 
 /// @brief insert a new element to the beginning of the list. 
 /// @param head 
 /// @param element 
-void list_insert_to_head(node **head, list_type element) {
-    node *new_node;
+void list_insert_to_head(Node **head, list_type element) {
+    Node *new_Node;
 
-    new_node = (node*) malloc(sizeof(node));
-    if(new_node != NULL) {
-        new_node->data = element;
-        new_node->next = *head; 
-        *head = new_node;
+    new_Node = (Node*) malloc(sizeof(Node));
+    if(new_Node != NULL) {
+        new_Node->data = element;
+        new_Node->next = *head; 
+        *head = new_Node;
     } 
 }
 
-/// @brief insert a new element to the list after a certain node.
+/// @brief insert a new element to the list after a certain Node.
 /// @param n 
 /// @param element 
-void list_insert_after(node *n, list_type element) {
-    node *new_node;
+void list_insert_after(Node *n, list_type element) {
+    Node *new_Node;
     
-    new_node = (node*) malloc(sizeof(node));
-    if(new_node != NULL) {
-        new_node->data = element;
-        new_node->next = n->next;
-        n->next = new_node;
+    new_Node = (Node*) malloc(sizeof(Node));
+    if(new_Node != NULL) {
+        new_Node->data = element;
+        new_Node->next = n->next;
+        n->next = new_Node;
     }
 }
 
 /// @brief insert a new element to the end of the list.
 /// @param n 
 /// @param element 
-void list_insert_end(node *n, list_type element) {
-    node *new_node;
+void list_insert_end(Node *n, list_type element) {
+    Node *new_Node;
 
-    new_node = (node*) malloc(sizeof(node));
-    if(new_node != NULL) {
-        new_node->data = element;
+    new_Node = (Node*) malloc(sizeof(Node));
+    if(new_Node != NULL) {
+        new_Node->data = element;
         while(n->next != NULL)
             n = n->next;
-        n->next = new_node;
+        n->next = new_Node;
     }
 }
 
@@ -57,9 +57,9 @@ void list_insert_end(node *n, list_type element) {
 /// @brief link to lists together into a new list. 
 /// @param start 
 /// @param end 
-/// @param new_node 
-void list_link(node *start, node *end, node **new_node) {
-    (*new_node)->next = start;
+/// @param new_Node 
+void list_link(Node *start, Node *end, Node **new_Node) {
+    (*new_Node)->next = start;
     while(start->next != NULL)
         start = start->next;
     start->next = end;
@@ -67,8 +67,8 @@ void list_link(node *start, node *end, node **new_node) {
 
 /// @brief create a new list using user inputs.
 /// @return head to new list.
-node* list_create() {
-    node *head, *last;
+Node* list_create() {
+    Node *head, *last;
     int condition, n;
     list_init(&head);
 
@@ -87,8 +87,8 @@ node* list_create() {
     return head;
 }
 
-void list_flip(node **n) {
-    node *head;
+void list_flip(Node **n) {
+    Node *head;
     list_init(&head);
 
     while(*n != NULL) {
