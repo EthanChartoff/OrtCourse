@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+
+<VBox fx:id="c_vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-alignment: center; -fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.fx.CircleController">
+   <children>
+      <Circle fx:id="c_circle" fill="#ffffff00" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <HBox fx:id="c_hbox" prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center; -fx-spacing: 40;">
+         <children>
+            <Button fx:id="c_btn_enlarge" mnemonicParsing="false" onAction="#onEnlargeClick" text="Enlarge" />
+            <Button fx:id="c_btn_delarge" mnemonicParsing="false" onAction="#onDelargeClick" text="Delarge" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -52,8 +52,6 @@ void list_insert_end(Node *n, list_type element) {
     }
 }
 
-
-
 /// @brief link to lists together into a new list. 
 /// @param start 
 /// @param end 
@@ -97,6 +95,13 @@ void list_flip(Node **n) {
     }
     
     *n = head;
+}
+
+void list_print(Node *n) {
+    while(n != NULL) {
+        printf("%d->", n->data);
+        n = n->next;
+    }
 }
 
 

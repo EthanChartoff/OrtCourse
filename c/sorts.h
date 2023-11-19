@@ -1,0 +1,1 @@
+void merge_sort(int arr[], size_t n);

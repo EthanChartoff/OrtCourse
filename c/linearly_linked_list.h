@@ -18,3 +18,8 @@ int list_is_empty(Node *n);
 void list_link(Node *start, Node *end, Node **new_Node);
 Node* list_create();
 void list_flip(Node **n);
+void list_print(Node *n);
+int list_is_in(Node **n);
+int list_length(Node **n);
+int list_biggest_diff(Node **n);
+void list_split_oddeven(Node **n);

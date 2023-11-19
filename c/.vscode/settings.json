@@ -2,7 +2,12 @@
     "files.associations": {
         "stdio.h": "c",
         "linearly_linked_list.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "sorts.h": "c",
+        "polynomial.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c",
+        "linked_stack.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

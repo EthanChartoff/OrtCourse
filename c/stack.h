@@ -10,15 +10,9 @@ typedef struct {
 } Stack;
 
 void stack_init(Stack *s);
-
 int stack_empty(Stack s);
-
 int stack_full(Stack s);
-
 void push(Stack *s, stack_item x);
-
 stack_item pop(Stack *s);
-
 stack_item top(Stack s);
-
 void flip(Stack *s);
