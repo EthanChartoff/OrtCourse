@@ -67,20 +67,17 @@ void list_link(Node *start, Node *end, Node **new_Node) {
 /// @return head to new list.
 Node* list_create() {
     Node *head, *last;
-    int condition, n;
+    int n;
     list_init(&head);
 
-    condition = scanf("%d", &n);
-    while(condition) {
+    while(scanf("%d", &n) == 1) {
         if(head == NULL) {
             list_insert_to_head(&head, n);
             last = head;
         } else {
             list_insert_after(last, n);
             last = last->next;
-        }
-
-        condition = scanf("%d", &n);
+        } 
     }
     return head;
 }

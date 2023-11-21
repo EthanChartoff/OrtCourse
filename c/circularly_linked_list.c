@@ -19,6 +19,7 @@ void list_insert_after(Node *node, list_type x) {
     }
 }
 
+// list points to the end of the list 
 void list_insert_tail(Node **list, list_type x) {
     Node *new_node;
 

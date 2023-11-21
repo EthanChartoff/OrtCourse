@@ -7,7 +7,8 @@
         "polynomial.h": "c",
         "string.h": "c",
         "stdlib.h": "c",
-        "linked_stack.h": "c"
+        "linked_stack.h": "c",
+        "circularly_doubly_linked_list.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
