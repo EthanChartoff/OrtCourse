@@ -23,3 +23,4 @@ int list_is_in(Node **n);
 int list_length(Node **n);
 int list_biggest_diff(Node **n);
 void list_split_oddeven(Node **n);
+void list_scan_and_sort_2(Node **n1, Node **n2);

@@ -4,9 +4,7 @@
 
 #include "circularly_linked_list.h"
 
-void list_init(Node **list) {
-    *list = NULL;
-}
+
 
 void list_insert_after(Node *node, list_type x) {
     Node *new_node;

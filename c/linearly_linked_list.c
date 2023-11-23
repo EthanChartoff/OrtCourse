@@ -46,9 +46,14 @@ void list_insert_end(Node *n, list_type element) {
     new_Node = (Node*) malloc(sizeof(Node));
     if(new_Node != NULL) {
         new_Node->data = element;
-        while(n->next != NULL)
-            n = n->next;
-        n->next = new_Node;
+        new_Node->next = NULL;
+        if(n != NULL) {
+            while(n->next != NULL)
+                n = n->next;
+            n->next = new_Node;   
+        } else {
+            n = new_Node;
+        }
     }
 }
 
@@ -98,6 +103,57 @@ void list_print(Node *n) {
     while(n != NULL) {
         printf("%d->", n->data);
         n = n->next;
+    }
+}
+
+// scan nums for 2 empty lists, put the nums into each list sorted.
+void list_scan_and_sort_2(Node **n1, Node **n2) {
+    int i, n, flag;
+    Node *tmp;
+
+    while(scanf("%d", &n) == 1) {
+        tmp = *n1;
+        flag = 1;
+        if(*n1 == NULL) {
+            list_insert_to_head(n1, n);
+        }
+        while(flag && tmp != NULL) {
+            if(tmp->next == NULL) {
+                if(n < tmp->data) {
+                    list_insert_after(tmp, n);
+                } else {
+                    list_insert_to_head(n1, n);
+                }
+                flag = 0;
+            } else if(n < tmp->data && n >= tmp->next->data) {
+                list_insert_after(tmp, n);
+                flag = 0;
+            }
+            tmp = tmp->next;
+        } 
+    }
+    getchar();
+
+    while(scanf("%d", &n) == 1) {
+        tmp = *n2;
+        flag = 1;
+        if(*n2 == NULL) {
+            list_insert_to_head(n2, n);
+        }
+        while(flag && tmp != NULL) {
+            if(tmp->next == NULL) {
+                if(n < tmp->data) {
+                    list_insert_after(tmp, n);
+                } else {
+                    list_insert_to_head(n2, n);
+                }
+                flag = 0;
+            } else if(n < tmp->data && n >= tmp->next->data) {
+                list_insert_after(tmp, n);
+                flag = 0;
+            }
+            tmp = tmp->next;
+        } 
     }
 }
 
