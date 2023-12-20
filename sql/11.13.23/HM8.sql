@@ -38,4 +38,6 @@ select o.CustomerID from orders o
 	where coalesce((select od.orderID from orderdetails od 
 		where o.orderID = od.orderID and od.productID = 55), 0) > 
 		coalesce((select od.orderID from orderdetails od 
-			where o.orderID = od.orderID and od.productID = 42), 0);
+			where o.orderID = od.orderID and od.productID = 42), 0)
+		and exists(select 1 from orderdetails od where od.productID = 55)
+        and exists(select 1 from orderdetails od where od.productID = 42);

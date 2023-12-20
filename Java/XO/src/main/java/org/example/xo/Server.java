@@ -5,31 +5,38 @@ import javafx.application.Platform;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Server implements Runnable {
+    public static final int PORT = 8008;
+    public static final String HOST = "localhost";
+
+    private static HashMap<Integer, ServerRequest> requests = new HashMap<>();
+    private static List<Game> games = new ArrayList<>();
+
     private ServerSocket serverSocket;
-    private List<Client> clients;
+
 
     public Server() {
         try {
-            this.serverSocket = new ServerSocket(8008);
+            this.serverSocket = new ServerSocket(Server.PORT);
         } catch (IOException e) {
-            System.out.println("Error creating server");
+            System.out.println("Error creating server:");
             e.printStackTrace();
         }
     }
 
     @Override
     public void run() {
+        Socket clientSocket;
         while(true) {
             try {
-                Socket clientSocket = this.serverSocket.accept();
-                Client client = new Client(clientSocket, this);
-                this.clients.add(client);
+                clientSocket = this.serverSocket.accept();
+                System.out.println("[SERVER] new connection " + clientSocket.toString());
 
-                new Thread(client).start();
+                new Thread(new Connection(clientSocket)).start();
+            } catch (EOFException e) {
+                System.out.println("[SERVER] client closed its conn");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -46,15 +53,15 @@ public class Server implements Runnable {
         }
     }
 
-    public void broadcastMsg(String msg, Client sender) {
-        for(Client c : clients) {
-            if(c != sender) {
-                c.sendMsg(msg);
-            }
-        }
+    public static Map<Integer, ServerRequest> getRequests() {
+        return requests;
     }
 
-    public void removeClient(Client client) {
-        clients.remove(client);
+    public static List<Game> getGames() {
+        return games;
+    }
+
+    public static void main(String[] args) {
+        new Server().run();
     }
 }

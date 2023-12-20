@@ -1,11 +1,16 @@
 package org.example.xo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -17,10 +22,63 @@ public class CIntro implements Initializable {
     @FXML
     private TextField n;
 
-    private Server server;
+    @FXML
+    private Button match_btn;
+
+    @FXML
+    private Stage root;
+
+    private Client client;
+
+    private CGame gameController;
+
+    public CIntro(Stage root) {
+        this.root = root;
+        this.gameController = new CGame(this.root);
+    }
+
+    // on match btn click
+    // change view to looking for match view
+    // set n and layers to their text area vals
+    private void onMatchBtnClick() {
+        // change screen to looking
+        try {
+            // send match request to server
+            this.client.sendRequest(ServerRequest.searchingMatchRequest(
+                    Integer.parseInt(this.n.textProperty().getValue()),
+                    Integer.parseInt(this.layers.textProperty().getValue())
+            ).toString());
+
+            this.gameController.waitForGame();
+        } catch (NumberFormatException e) {
+            System.out.println("[SYSTEM] rows/columns and layers must be not empty to search for a match");
+        }
+    }
+
+    public void setIntro() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(RunClient.class.getResource("intro.fxml"));
+        fxmlLoader.setController(this);
+
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        this.root.setTitle("XO!");
+        this.root.setScene(scene);
+        this.root.setOnCloseRequest(windowEvent -> this.client.stop());
+    }
+
+    public Stage getRoot() {
+        return root;
+    }
+
+    public void setRoot(Stage root) {
+        this.root = root;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        server = new Server();
+        // make client and connect it to the server
+        this.client = new Client(this.gameController);
+        new Thread(this.client).start();
+        // init widgets
+        match_btn.setOnAction(actionEvent -> onMatchBtnClick());
     }
 }
