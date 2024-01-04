@@ -6,13 +6,14 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Server implements Runnable {
     public static final int PORT = 8008;
     public static final String HOST = "localhost";
 
-    private static HashMap<Integer, ServerRequest> requests = new HashMap<>();
-    private static List<Game> games = new ArrayList<>();
+    public static volatile Map<Integer, Request> requests = new HashMap<>();
+    public static volatile List<Game> games = new ArrayList<>();
 
     private ServerSocket serverSocket;
 
@@ -51,14 +52,6 @@ public class Server implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static Map<Integer, ServerRequest> getRequests() {
-        return requests;
-    }
-
-    public static List<Game> getGames() {
-        return games;
     }
 
     public static void main(String[] args) {

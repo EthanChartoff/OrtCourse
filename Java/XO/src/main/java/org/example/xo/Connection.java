@@ -6,9 +6,6 @@ import java.io.*;
 import java.net.Socket;
 
 
-// TODO: problem with connections, cant match to clients against each other when handeling requests
-// in here because hash map will have its elements removed for the 2 matched threads. maybe need to
-// move handeling reqs to the server.
 public class Connection implements Closeable, Runnable {
     private Socket socket;
 
@@ -59,10 +56,12 @@ public class Connection implements Closeable, Runnable {
 
     private void processRequest(ServerRequest request) {
         System.out.println("[CONNECTION] received from client: " + request);
-        Server.getRequests().put(request.hashCode(), request);
+        Server.requests.put(request.hashCode(), request);
 
         if(ServerRequest.isSearchingRequest(request)) {
             this.searchingForMatch(request.getRequest().toString());
+        } else if(ServerRequest.isNeedGames(request)) {
+            this.sendRequest(Server.games.toString());
         }
     }
 
@@ -72,17 +71,19 @@ public class Connection implements Closeable, Runnable {
             int layers = request.charAt(request.indexOf("layers=") + "layers=".length()) - '0';
             boolean gameFound = false;
 
-            for(Game g : Server.getGames()) {
+            for(Game g : Server.games) {
+
                 if(g.getN() == n && g.getLayers() == layers) {
                     this.foundMatch(g);
                     gameFound = true;
                     System.out.println("[CONNECTION] game found between " + g.getPlayerX().getSocket().toString() + "and " + g.getPlayerO().getSocket().toString());
+
                     break;
                 }
             }
 
             if(!gameFound)
-                Server.getGames().add(new Game(
+                Server.games.add(new Game(
                         n,
                         layers,
                         this,
@@ -109,5 +110,14 @@ public class Connection implements Closeable, Runnable {
 
     public Socket getSocket() {
         return socket;
+    }
+
+    @Override
+    public String toString() {
+        return "Connection{" +
+                "socket=" + socket +
+                ", inputStream=" + inputStream +
+                ", outputStream=" + outputStream +
+                '}';
     }
 }

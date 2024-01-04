@@ -42,26 +42,24 @@ public class CGame {
     }
 
     public void initGame(Game g) {
-        Platform.runLater(() -> {
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(RunClient.class.getResource("grid.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
-                this.root.setScene(scene);
-                this.game = g;
-            } catch (IOException e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
-            }
-            // get all children of gridbox
-            ((VBox) this.root.getScene().getRoot()).getChildren().filtered(node -> node instanceof HBox)
-                    .forEach(hbox -> ((HBox) hbox)
-                            .getChildren().filtered(node -> node instanceof BorderPane)
-                            .forEach(bpane -> ((BorderPane) bpane)
-                                    .getChildren().filtered(node -> node instanceof ImageView)
-                                    .forEach(iview -> this.tiles.add((ImageView) iview))));
-            this.tiles.forEach(tile -> tile.setOnMouseClicked(
-                    mouseEvent ->  g.move(tile, this.tiles.indexOf(tile))));
-        });
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(RunClient.class.getResource("grid.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            this.root.setScene(scene);
+            this.game = g;
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        // get all children of gridbox
+        ((VBox) this.root.getScene().getRoot()).getChildren().filtered(node -> node instanceof HBox)
+                .forEach(hbox -> ((HBox) hbox)
+                        .getChildren().filtered(node -> node instanceof BorderPane)
+                        .forEach(bpane -> ((BorderPane) bpane)
+                                .getChildren().filtered(node -> node instanceof ImageView)
+                                .forEach(iview -> this.tiles.add((ImageView) iview))));
+        this.tiles.forEach(tile -> tile.setOnMouseClicked(
+                mouseEvent ->  g.move(tile, this.tiles.indexOf(tile))));
     }
 
     public Stage getRoot() {

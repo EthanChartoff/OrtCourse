@@ -11,4 +11,8 @@ public class ServerRequest extends Request {
     public static boolean isSearchingRequest(ServerRequest request) {
         return request.getRequest().toString().contains("Searching for Match");
     }
+
+    public static boolean isNeedGames(ServerRequest request) {
+        return request.getRequest().toString().contains("need games");
+    }
 }

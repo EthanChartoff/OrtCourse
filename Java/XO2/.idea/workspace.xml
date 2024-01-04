@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca66d549-5e2c-416a-8dc9-07505de5fc09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../XO.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XO/src/main/java/org/example/xo/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../XO/src/main/java/org/example/xo/Client.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2Zz84AAWFVHxBh164eC9vvKPN4n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RunClient.executor": "Run",
+    "Application.Server.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/goodman/School/OrtCourse/Java/XO"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.RunClient">
+    <configuration name="RunClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.xo.RunClient" />
+      <module name="XO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.xo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.xo.Server" />
+      <module name="XO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.xo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.xo2.RunClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.xo2.RunClient" />
+      <module name="XO2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.xo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.RunClient" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.org.example.xo2.RunClient" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RunClient" />
+        <item itemvalue="Application.org.example.xo2.RunClient" />
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-cc9f59e6" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca66d549-5e2c-416a-8dc9-07505de5fc09" name="Changes" comment="" />
+      <created>1703413353914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703413353914</updated>
+    </task>
+    <servers />
+  </component>
+</project>

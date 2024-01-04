@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 
 public class Client implements Runnable {
 
@@ -23,6 +24,8 @@ public class Client implements Runnable {
             this.gameController = gameController;
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            System.out.println("[CLIENT " + this.socket.toString() + "] Connected to server!");
         }
     }
 
@@ -30,16 +33,16 @@ public class Client implements Runnable {
     public void run() {
         Object read;
         try {
-            while((read = inStream.readObject()) != null) {
+            while((read = inStream.readObject()) != null)
                 this.handleRequest(read);
-            }
         } catch (SocketException e) {
-//            e.printStackTrace();
+            e.printStackTrace();
             System.out.println("[CLIENT " + this.socket.toString() + "] closed connection");
+            this.stop();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
-            this.stop();
+            System.out.println("on run");
         }
     }
 
@@ -49,11 +52,22 @@ public class Client implements Runnable {
 
     private void processRequest(ClientRequest request) {
         String reqStr = request.getRequest().toString();
-        Game g = Server.getGames().get(reqStr.charAt(reqStr.indexOf("index=") + "index=".length()) - '0');
-
         System.out.println("[CLIENT] received: " + request);
         if(ClientRequest.isFoundRequest(request)) {
-            gameController.initGame(g);
+            System.out.println(this.getGames());
+            Game g = Server.games.get(reqStr.charAt(reqStr.indexOf("index=") + "index=".length()) - '0');
+            Platform.runLater(() -> gameController.initGame(g));
+        }
+    }
+
+    private ArrayList<Game> getGames() {
+        try {
+            this.sendRequest("need games");
+            return ClientRequest.readGames(new ClientRequest(inStream.readObject()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 

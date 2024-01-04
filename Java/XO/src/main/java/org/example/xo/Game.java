@@ -2,6 +2,8 @@ package org.example.xo;
 
 import javafx.scene.image.ImageView;
 
+import java.util.Arrays;
+
 public class Game {
 
     private final int n;
@@ -84,5 +86,18 @@ public class Game {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "n=" + n +
+                ", layers=" + layers +
+                ", playerX=" + playerX.toString() +
+                ", playerO=" + playerO.toString() +
+                ", grid=" + Arrays.deepToString(grid) +
+                ", moveCounter=" + moveCounter +
+                ", status=" + status +
+                '}';
     }
 }

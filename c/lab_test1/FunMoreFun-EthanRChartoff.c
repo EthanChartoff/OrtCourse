@@ -46,8 +46,8 @@ int Fun(Node **list, Node **res) {
         return 1;
     }
 
-    if (head)
-        (*list) = head->next;
+    // if (head)
+    //     (*list) = head->next;
     // Remove odd and even nodes from the original list
     if (prev_even != NULL) {
         if (head && head == prev_even) // If the head is even
