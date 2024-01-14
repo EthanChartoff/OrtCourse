@@ -13,9 +13,9 @@ public class ClientRequest extends Request {
     public static ClientRequest matchFoundRequest(Game g, Socket px, Socket po) {
         return new ClientRequest("Found Match[index="
                                 + Server.games.indexOf(g)
-                                + " (player X) "
+                                + " playerX="
                                 + px.toString()
-                                + " (player o) "
+                                + " playerO="
                                 + po.toString()
                                 + "]");
 
@@ -26,24 +26,8 @@ public class ClientRequest extends Request {
         return request.getRequest().toString().contains("Found Match");
     }
 
-    public static ArrayList<Game> readGames(ClientRequest request) {
-        List games = new ArrayList<Game>();
-        String reqStr = request.toString();
-
-        for (String s : reqStr.substring(1, reqStr.length() - 2).split(",")) {
-            String playerXStr = reqStr.substring(reqStr.indexOf("playerX=Connection"));
-            Connection playerX = new Connection(new Socket(
-
-            ));
-            games.add(new Game(
-                    reqStr.charAt(s.indexOf("n=") + "n=".length()) - '0',
-                    reqStr.charAt(s.indexOf("layers=") + "layers=".length()) - '0',
-                    new Connection(new Socket(
-                            Integer.parseInt(reqStr.substring(s.indexOf("n=") + "n=".length()) - '0')
-                    )),
-                    reqStr.charAt(s.indexOf("n=") + "n=".length()) - '0',
-            ))
-        }
-        return (ArrayList<Game>) o;
-    }
+//    public static ArrayList<Game> readGame(ClientRequest request) {
+//
+//        return (ArrayList<Game>) o;
+//    }
 }
