@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+
+%polyglossia packages - polyglossia must be first
+\usepackage{polyglossia}
+\usepackage{bidi}
+
+%XeTeX packages
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+
+%settings for packages
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+\setmainfont{Linux Libertine O}
+
+\begin{document}
+
+Here is a whole phrase or section in left-to-right direction:
+
+\setRL
+ הנשיא האמריקאי ברק אובמה נאם הערב (שישי) בוועידת הקהילות היהודיות שנערכה בוושינגטון.
+\unsetRL
+
+Or, for when a few words will do:
+
+\RL{\ldots נאם הערב (שישי) בוועידת\ldots}
+
+And it works fine with numbers as well:
+
+\RL{\ldots נאם 100 + 30 = 130 הערב (שישי) בוועידת\ldots}
+
+Even nested environments work just fine:
+
+\RL{\ldots נאם \LR{with English in the middle} הערב (שישי) בוועידת\ldots}
+
+\end{document}

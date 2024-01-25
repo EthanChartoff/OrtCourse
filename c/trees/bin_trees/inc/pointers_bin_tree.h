@@ -14,9 +14,6 @@ typedef struct POINTER_BINARY_TREE_STRUCT {
 // Initialize tree
 p_bin_tree_T* init_p_bin_tree(void* data);
 
-// Insertions
-void set_left(void* data);
-void set_right(void* data);
-
-
+// Searches
+void 
 
