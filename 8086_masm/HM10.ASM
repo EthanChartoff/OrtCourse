@@ -10,37 +10,29 @@
 ; --------------------------
 ; Procs here
 ; --------------------------
-Q1 PROC
-	push ax
-	push bx
-	pop ax
-	pop bx 	
-	
-	ret
-Q1 ENDP
+lol PROC
+	push bp
+	mov sp, bp
 
-; when going into the proc, assume ax already has a value
-Q2 PROC
-	xor cx, cx
-	mov bx, 10
-put_dec_on_stk:
-	xor dx, dx
-	div bx
-	push dx
-	inc cx
-	
-	or ax, 0
-	jnz put_dec_on_stk
-	
-	mov ah, 2
-print_dec:
-	pop dx
-	add dl, '0'
-	int 21h
-	loop print_dec
-	
-	ret
-Q2 ENDP
+	mov bl, 1
+	mov dl, 10
+	mov ax, [bp + 4]
+check_mod:
+	cmp al, 10
+	jb sof
+	div dl
+	push ah
+	call lol
+
+sof:
+	cmp al, [bp + 4]
+	jb good
+	mov bl, 0
+
+good: 
+	ret 4
+
+lol ENDP
 
 start:
 	mov ax, @DATA

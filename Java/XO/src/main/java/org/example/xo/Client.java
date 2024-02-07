@@ -5,16 +5,15 @@ import javafx.application.Platform;
 import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
-import java.util.ArrayList;
 
 public class Client implements Runnable {
 
     private Socket socket;
 
-    private ObjectInputStream inStream;
-    private ObjectOutputStream outStream;
+    private final ObjectInputStream inStream;
+    private final ObjectOutputStream outStream;
 
-    private CGame gameController;
+    private final CGame gameController;
 
     public Client(CGame gameController) {
         try {
@@ -53,22 +52,13 @@ public class Client implements Runnable {
     private void processRequest(ClientRequest request) {
         String reqStr = request.getRequest().toString();
         System.out.println("[CLIENT] received: " + request);
-        System.out.println(ClientRequest.isFoundRequest(request));
+
         if(ClientRequest.isFoundRequest(request)) {
+
+
             Platform.runLater(() -> gameController.initGame());
         }
     }
-
-//    private ArrayList<Game> getGames() {
-//        try {
-//            this.sendRequest("need games");
-//            return ClientRequest.readGames(new ClientRequest(inStream.readObject()));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
     public void stop() {
         try {
@@ -91,10 +81,14 @@ public class Client implements Runnable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("[CLIENT " + this.socket.toString() + "] new msg: " + msg);
+        System.out.println("[CLIENT] new msg: " + msg);
     }
 
     public String getClientAddress() {
         return this.socket.getInetAddress().toString();
+    }
+
+    public void move(Players player, int i) {
+        this.sendRequest(ClientRequest.moveRequest(player, i).toString());
     }
 }

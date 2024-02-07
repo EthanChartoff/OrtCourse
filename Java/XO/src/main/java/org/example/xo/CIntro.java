@@ -34,7 +34,6 @@ public class CIntro implements Initializable {
 
     public CIntro(Stage root) {
         this.root = root;
-        this.gameController = new CGame(this.root);
     }
 
     // on match btn click
@@ -65,18 +64,13 @@ public class CIntro implements Initializable {
         this.root.setOnCloseRequest(windowEvent -> this.client.stop());
     }
 
-    public Stage getRoot() {
-        return root;
-    }
-
-    public void setRoot(Stage root) {
-        this.root = root;
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // make client and connect it to the server
+        // make client and game controller, connect them to each other
+        this.gameController = new CGame(this.root, null);
         this.client = new Client(this.gameController);
+        this.gameController.setPlayer(client);
+
         new Thread(this.client).start();
         // init widgets
         match_btn.setOnAction(actionEvent -> onMatchBtnClick());

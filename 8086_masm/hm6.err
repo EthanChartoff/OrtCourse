@@ -1,0 +1,52 @@
+hm6.asm(1) : Error A2096: Model is not declared
+hm6.asm(2) : Error A2096: Model is not declared
+hm6.asm(7) : Error A2082: Must be in segment block
+hm6.asm(11) : Error A2082: Must be in segment block
+hm6.asm(12) : Error A2082: Must be in segment block
+hm6.asm(13) : Error A2082: Must be in segment block
+hm6.asm(14) : Error A2082: Must be in segment block
+hm6.asm(17) : Error A2082: Must be in segment block
+hm6.asm(20) : Error A2082: Must be in segment block
+hm6.asm(21) : Error A2082: Must be in segment block
+hm6.asm(22) : Error A2082: Must be in segment block
+hm6.asm(23) : Error A2082: Must be in segment block
+hm6.asm(25) : Error A2096: Model is not declared
+hm6.asm(28) : Error A2082: Must be in segment block
+hm6.asm(29) : Error A2082: Must be in segment block
+hm6.asm(30) : Error A2082: Must be in segment block
+hm6.asm(31) : Error A2082: Must be in segment block
+hm6.asm(32) : Error A2082: Must be in segment block
+hm6.asm(33) : Error A2082: Must be in segment block
+hm6.asm(35) : Error A2082: Must be in segment block
+hm6.asm(38) : Error A2082: Must be in segment block
+hm6.asm(39) : Error A2082: Must be in segment block
+hm6.asm(40) : Error A2082: Must be in segment block
+hm6.asm(41) : Error A2082: Must be in segment block
+hm6.asm(42) : Error A2082: Must be in segment block
+hm6.asm(44) : Error A2082: Must be in segment block
+hm6.asm(46) : Error A2082: Must be in segment block
+hm6.asm(47) : Error A2082: Must be in segment block
+hm6.asm(48) : Error A2082: Must be in segment block
+hm6.asm(50) : Error A2082: Must be in segment block
+hm6.asm(52) : Error A2082: Must be in segment block
+hm6.asm(53) : Error A2082: Must be in segment block
+hm6.asm(54) : Error A2082: Must be in segment block
+hm6.asm(56) : Error A2082: Must be in segment block
+hm6.asm(58) : Error A2082: Must be in segment block
+hm6.asm(61) : Error A2082: Must be in segment block
+hm6.asm(62) : Error A2082: Must be in segment block
+hm6.asm(63) : Error A2082: Must be in segment block
+hm6.asm(64) : Error A2082: Must be in segment block
+hm6.asm(65) : Error A2082: Must be in segment block
+hm6.asm(67) : Error A2082: Must be in segment block
+hm6.asm(68) : Error A2082: Must be in segment block
+hm6.asm(70) : Error A2082: Must be in segment block
+hm6.asm(71) : Error A2082: Must be in segment block
+hm6.asm(73) : Error A2082: Must be in segment block
+hm6.asm(74) : Error A2082: Must be in segment block
+hm6.asm(77) : Error A2082: Must be in segment block
+hm6.asm(78) : Error A2082: Must be in segment block
+hm6.asm(79) : Error A2082: Must be in segment block
+hm6.asm(80) : Error A2082: Must be in segment block
+hm6.asm(82) : Error A2082: Must be in segment block
+hm6.asm(82) : Fatal error A1113: Too many errors

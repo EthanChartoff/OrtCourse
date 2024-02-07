@@ -6,8 +6,10 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox fx:id="gridBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="450.0" style="-fx-alignment: center;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.text.Text?>
+<VBox fx:id="gridBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="450.0" style="-fx-alignment: center;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="XO: the ultimate showdonwn"/>
       <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: BLACK;">

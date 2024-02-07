@@ -18,12 +18,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.example.xo.Players.PLAYER_X;
+
 public class CGame {
 
     static public Image x = new Image(new File("src/main/resources/org/example/xo/x.jpeg").toURI().toString());
     static public Image o = new Image(new File("src/main/resources/org/example/xo/o.jpeg").toURI().toString());
 
-    private int move = 0;
+    private int move;
 
     @FXML
     private List<ImageView> tiles;
@@ -31,11 +33,13 @@ public class CGame {
     @FXML
     private Stage root;
 
-    private Game game;
+    private Client player;
 
-    public CGame(Stage root) {
+    public CGame(Stage root, Client player) {
         this.root = root;
+        this.player = player;
         this.tiles = new ArrayList<>();
+        this.move = 0;
     }
 
     public void waitForGame() {
@@ -53,8 +57,6 @@ public class CGame {
             FXMLLoader fxmlLoader = new FXMLLoader(RunClient.class.getResource("grid.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             this.root.setScene(scene);
-            System.out.println(Server.games);
-//            this.game = g;
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
@@ -71,10 +73,15 @@ public class CGame {
     }
 
     private void move(ImageView tile) {
+        // x turn
         if(move % 2 == 0) {
             tile.setImage(x);
-        } else {
+            player.move(PLAYER_X, this.tiles.indexOf(tile));
+        }
+        // o turn
+        else {
             tile.setImage(o);
+//            player.move(PLAYER_X);
         }
         move++;
     }
@@ -85,5 +92,13 @@ public class CGame {
 
     public void setRoot(Stage root) {
         this.root = root;
+    }
+
+    public Client getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Client player) {
+        this.player = player;
     }
 }

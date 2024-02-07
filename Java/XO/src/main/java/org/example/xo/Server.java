@@ -15,6 +15,8 @@ public class Server implements Runnable {
     public static volatile Map<Integer, Request> requests = new ConcurrentHashMap<>();
     public static volatile List<Game> games = new ArrayList<>();
 
+    private static Map<Integer, Connection> conns = new HashMap<>();
+
     private ServerSocket serverSocket;
 
 
@@ -33,9 +35,11 @@ public class Server implements Runnable {
         while(true) {
             try {
                 clientSocket = this.serverSocket.accept();
+                new Connection(clientSocket);
                 System.out.println("[SERVER] new connection " + clientSocket.toString());
 
-                new Thread(new Connection(clientSocket)).start();
+
+                new Thread().start();
             } catch (EOFException e) {
                 System.out.println("[SERVER] client closed its conn");
             } catch (IOException e) {

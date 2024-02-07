@@ -33,13 +33,10 @@ public class Game {
     }
 
     public void initGame() {
-        String msg = ClientRequest.matchFoundRequest(
-                this,
-                this.playerX.getSocket(),
-                this.playerO.getSocket()
-        ).getRequest().toString();
-
         this.status = Status.ACTIVE;
+
+        String msg = ClientRequest.matchFoundRequest(this).getRequest().toString();
+
         this.playerX.sendRequest(msg);
         this.playerO.sendRequest(msg);
     }

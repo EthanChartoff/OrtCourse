@@ -72,10 +72,11 @@ public class Connection implements Closeable, Runnable {
             boolean gameFound = false;
 
             for(Game g : Server.games) {
-
-                if(g.getN() == n && g.getLayers() == layers) {
-                    this.foundMatch(g);
+                // if theres a match that searching for another player with the same request
+                if(g.getN() == n && g.getLayers() == layers && g.getStatus() == Status.SEARCHING) {
                     gameFound = true;
+                    this.foundMatch(g);
+
                     System.out.println(
                                     "[CONNECTION] game found between "
                                     + g.getPlayerX().getSocket().toString()
