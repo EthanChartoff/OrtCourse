@@ -1,6 +1,8 @@
 package org.example.xo;
 
 import javafx.application.Platform;
+import org.example.DB.GameDB;
+import org.example.DB.GameModel;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -13,9 +15,11 @@ public class Server implements Runnable {
     public static final String HOST = "localhost";
 
     public static volatile Map<Integer, Request> requests = new ConcurrentHashMap<>();
-    public static volatile List<Game> games = new ArrayList<>();
+    public static volatile Map<Integer, Game> games = new HashMap<>();
 
     private static Map<Integer, Connection> conns = new HashMap<>();
+
+    static private final GameDB gameDB = new GameDB();
 
     private ServerSocket serverSocket;
 
@@ -32,14 +36,15 @@ public class Server implements Runnable {
     @Override
     public void run() {
         Socket clientSocket;
+        Connection conn;
         while(true) {
             try {
                 clientSocket = this.serverSocket.accept();
-                new Connection(clientSocket);
+                conn = new Connection(clientSocket);
                 System.out.println("[SERVER] new connection " + clientSocket.toString());
+                conns.put(conn.hashCode(), conn);
 
-
-                new Thread().start();
+                new Thread(conn).start();
             } catch (EOFException e) {
                 System.out.println("[SERVER] client closed its conn");
             } catch (IOException e) {
@@ -56,6 +61,12 @@ public class Server implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    static public void addGameToDB(Game game) {
+        gameDB.insert(new GameModel(game));
+        gameDB.saveChanges();
+        System.out.println(game);
     }
 
     public static void main(String[] args) {

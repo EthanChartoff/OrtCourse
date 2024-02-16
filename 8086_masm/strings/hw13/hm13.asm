@@ -79,6 +79,7 @@ detect_L:
     repne scasb     ; rep until found 'L'
     jnz exit        ; exit if at end of string
 
+                    ; note: you can check T and D at the same time with scasb
 detect_T:
     mov al, 'T'         
     scasb           ; check if next char is T

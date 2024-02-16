@@ -1,6 +1,6 @@
 package org.example.xo;
 
-enum Status {
+public enum Status {
     SEARCHING,
     ACTIVE,
     INACTIVE

@@ -11,11 +11,13 @@ public class Game {
     private Connection playerX;
     private Connection playerO;
 
-    private Tile grid[][];
+    private Tile[][] grid;
 
     private int moveCounter;
 
     private Status status;
+
+    private GameResult result;
 
     public Game(int n, int layers, Connection playerX, Connection playerO) {
         this.n = n;
@@ -30,19 +32,17 @@ public class Game {
                 grid[i][j] = Tile.EMPTY;
 
         this.status = Status.SEARCHING;
+        this.result = GameResult.NULL;
     }
 
     public void initGame() {
         this.status = Status.ACTIVE;
+        System.out.println(this.hashCode());
+        MatchFoundRequest msgx = new MatchFoundRequest(n, layers, Players.PLAYER_X, this.hashCode());
+        MatchFoundRequest msgo = new MatchFoundRequest(n, layers, Players.PLAYER_O, this.hashCode());
 
-        String msg = ClientRequest.matchFoundRequest(this).getRequest().toString();
-
-        this.playerX.sendRequest(msg);
-        this.playerO.sendRequest(msg);
-    }
-
-    public void move(ImageView tile, int i) {
-
+        this.playerX.sendRequest(msgx);
+        this.playerO.sendRequest(msgo);
     }
 
     public int getN() {
@@ -77,6 +77,14 @@ public class Game {
         this.grid = grid;
     }
 
+    public Tile getTile(int x, int y) {
+        return grid[y][x];
+    }
+
+    public void setTile(int x ,int y, Tile tile) {
+        this.grid[y][x] = tile;
+    }
+
     public Status getStatus() {
         return status;
     }
@@ -85,16 +93,33 @@ public class Game {
         this.status = status;
     }
 
+    public int getMoveCounter() {
+        return moveCounter;
+    }
+
+    public void setMoveCounter(int moveCounter) {
+        this.moveCounter = moveCounter;
+    }
+
+    public GameResult getResult() {
+        return result;
+    }
+
+    public void setResult(GameResult result) {
+        this.result = result;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
                 "n=" + n +
                 ", layers=" + layers +
-                ", playerX=" + playerX.toString() +
-                ", playerO=" + playerO.toString() +
+                ", playerX=" + playerX +
+                ", playerO=" + playerO +
                 ", grid=" + Arrays.deepToString(grid) +
                 ", moveCounter=" + moveCounter +
                 ", status=" + status +
+                ", result=" + result +
                 '}';
     }
 }

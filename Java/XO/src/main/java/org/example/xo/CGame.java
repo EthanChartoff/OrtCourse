@@ -1,10 +1,9 @@
 package org.example.xo;
 
 import javafx.application.Platform;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -18,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.example.xo.Players.PLAYER_O;
 import static org.example.xo.Players.PLAYER_X;
 
 public class CGame {
@@ -34,12 +34,19 @@ public class CGame {
     private Stage root;
 
     private Client player;
+    private Players type;
+    private int currGameHash;
 
-    public CGame(Stage root, Client player) {
+    public CGame(Stage root, Client player, Players type) {
         this.root = root;
         this.player = player;
         this.tiles = new ArrayList<>();
         this.move = 0;
+        this.type = type;
+    }
+
+    public CGame(Stage root) {
+        this(root, null, null);
     }
 
     public void waitForGame() {
@@ -52,7 +59,9 @@ public class CGame {
         }
     }
 
-    public void initGame() {
+    public void initGame(int hash) {
+        this.currGameHash = hash;
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(RunClient.class.getResource("grid.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
@@ -61,7 +70,8 @@ public class CGame {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-         // get all children of gridbox
+
+        // get all children of gridbox
         ((VBox) this.root.getScene().getRoot()).getChildren().filtered(node -> node instanceof HBox)
                 .forEach(hbox -> ((HBox) hbox)
                         .getChildren().filtered(node -> node instanceof BorderPane)
@@ -74,15 +84,21 @@ public class CGame {
 
     private void move(ImageView tile) {
         // x turn
-        if(move % 2 == 0) {
+        if(type == PLAYER_X && move % 2 == 0) {
             tile.setImage(x);
-            player.move(PLAYER_X, this.tiles.indexOf(tile));
+            player.move(PLAYER_X, this.tiles.indexOf(tile), currGameHash);
+            move++;
         }
         // o turn
-        else {
+        else if(type == PLAYER_O && move % 2 == 1) {
             tile.setImage(o);
-//            player.move(PLAYER_X);
+            player.move(PLAYER_O, this.tiles.indexOf(tile), currGameHash);
+            move++;
         }
+    }
+
+    public void opponentMove(MoveRequest request) {
+        tiles.get(request.getIndex()).setImage(request.getType() == PLAYER_X ? x : o);
         move++;
     }
 
@@ -100,5 +116,13 @@ public class CGame {
 
     public void setPlayer(Client player) {
         this.player = player;
+    }
+
+    public Players getType() {
+        return type;
+    }
+
+    public void setType(Players type) {
+        this.type = type;
     }
 }

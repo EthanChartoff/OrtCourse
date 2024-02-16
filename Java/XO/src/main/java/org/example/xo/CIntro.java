@@ -43,10 +43,10 @@ public class CIntro implements Initializable {
         // change screen to looking
         try {
             // send match request to server
-            this.client.sendRequest(ServerRequest.searchingMatchRequest(
+            this.client.sendRequest(new SearchingMatchRequest(
                     Integer.parseInt(this.n.textProperty().getValue()),
                     Integer.parseInt(this.layers.textProperty().getValue())
-            ).toString());
+            ));
 
             this.gameController.waitForGame();
         } catch (NumberFormatException e) {
@@ -67,7 +67,7 @@ public class CIntro implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // make client and game controller, connect them to each other
-        this.gameController = new CGame(this.root, null);
+        this.gameController = new CGame(this.root);
         this.client = new Client(this.gameController);
         this.gameController.setPlayer(client);
 

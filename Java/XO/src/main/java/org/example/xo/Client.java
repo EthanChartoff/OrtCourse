@@ -33,30 +33,30 @@ public class Client implements Runnable {
         Object read;
         try {
             while((read = inStream.readObject()) != null)
-                this.handleRequest(read);
+                this.processRequest(read);
         } catch (SocketException e) {
             e.printStackTrace();
             System.out.println("[CLIENT " + this.socket.toString() + "] closed connection");
             this.stop();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
-        } finally {
-            System.out.println("on run");
         }
     }
 
-    private void handleRequest(Object read) throws IOException, ClassNotFoundException {
-        processRequest(new ClientRequest(read));
-    }
+    private void processRequest(Object request) {
+        System.out.println("[CLIENT] received: " + request.toString());
 
-    private void processRequest(ClientRequest request) {
-        String reqStr = request.getRequest().toString();
-        System.out.println("[CLIENT] received: " + request);
-
-        if(ClientRequest.isFoundRequest(request)) {
-
-
-            Platform.runLater(() -> gameController.initGame());
+        if(request instanceof MatchFoundRequest) {
+            gameController.setType(((MatchFoundRequest) request).getType());
+            Platform.runLater(() -> gameController.initGame(((MatchFoundRequest) request).getGameHash()));
+        } else if(request instanceof MoveRequest) {
+            gameController.opponentMove((MoveRequest) request);
+        } else if(request instanceof GameFinishedRequest) {
+            Platform.runLater(() -> new CFinish(gameController.getRoot()).initFinish(
+                    ((GameFinishedRequest) request).result));
+        }
+        else {
+            throw new IllegalStateException("Unexpected request type: " + request.getClass());
         }
     }
 
@@ -74,21 +74,21 @@ public class Client implements Runnable {
         }
     }
 
-    public void sendRequest(String msg) {
+    public void sendRequest(Object request) {
         try {
-            outStream.writeObject(msg);
+            outStream.writeObject(request);
             outStream.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("[CLIENT] new msg: " + msg);
+        System.out.println("[CLIENT] new msg: " + request);
     }
 
     public String getClientAddress() {
         return this.socket.getInetAddress().toString();
     }
 
-    public void move(Players player, int i) {
-        this.sendRequest(ClientRequest.moveRequest(player, i).toString());
+    public void move(Players type, int i, int gHash) {
+        this.sendRequest(new MoveRequest(gHash, type, i));
     }
 }

@@ -1,6 +1,6 @@
 package org.example.xo;
 
-enum Tile {
+public enum Tile {
     X,
     O,
     EMPTY
