@@ -16,6 +16,10 @@ public class GameDB extends DB {
     @Override
     protected BaseEntity createModel(BaseEntity entity) throws SQLException {
         if(entity instanceof GameModel)
+//            entity.starttime = ...
+//       Userdb db = new UserDb();
+//        entity.ply1= db.selectById();
+
             return createModel((GameModel) entity);
         return null;
     }

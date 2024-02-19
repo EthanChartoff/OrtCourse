@@ -16,6 +16,7 @@ public abstract class DB {
     protected abstract DB me();
     protected abstract BaseEntity createModel(BaseEntity entity) throws SQLException;
     protected abstract BaseEntity newEntity();
+
     public abstract PreparedStatement createInsertSql(BaseEntity entity);
     public abstract PreparedStatement createUpdateSql(BaseEntity entity);
     public abstract PreparedStatement createDeleteSql(BaseEntity entity);
@@ -23,7 +24,6 @@ public abstract class DB {
 
     protected DB() {
         this.connection = DBConnection.newConnection();
-
         try {
             connection.setAutoCommit(false);
         } catch (SQLException e) {

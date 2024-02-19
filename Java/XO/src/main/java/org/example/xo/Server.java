@@ -14,13 +14,11 @@ public class Server implements Runnable {
     public static final int PORT = 8008;
     public static final String HOST = "localhost";
 
+    private static final GameDB gameDB = new GameDB();
+
     public static volatile Map<Integer, Request> requests = new ConcurrentHashMap<>();
     public static volatile Map<Integer, Game> games = new HashMap<>();
-
     private static Map<Integer, Connection> conns = new HashMap<>();
-
-    static private final GameDB gameDB = new GameDB();
-
     private ServerSocket serverSocket;
 
 
@@ -66,7 +64,6 @@ public class Server implements Runnable {
     static public void addGameToDB(Game game) {
         gameDB.insert(new GameModel(game));
         gameDB.saveChanges();
-        System.out.println(game);
     }
 
     public static void main(String[] args) {
