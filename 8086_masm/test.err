@@ -1,0 +1,52 @@
+test(8) : Error A2106: Cannot open file: "\masm32\include\masm32rt.inc" [ENOENT]
+test(42) : Error A2096: Model is not declared
+test(55) : Error A2209: Syntax error: WC
+test(58) : Error A2082: Must be in segment block
+test(60) : Error A2082: Must be in segment block
+test(62) : Error A2082: Must be in segment block
+test(64) : Error A2082: Must be in segment block
+test(70) : Error A2096: Model is not declared
+test(72) : Error A2209: Syntax error: MainWinHandle
+test(73) : Error A2209: Syntax error: InstanceHandle
+test(74) : Error A2209: Syntax error: StatusHandle
+test(75) : Error A2082: Must be in segment block
+test(80) : Error A2096: Model is not declared
+test(83) : Error A2082: Must be in segment block
+test(84) : Error A2082: Must be in segment block
+test(86) : Error A2082: Must be in segment block
+test(87) : Error A2159: INVOKE requires prototype for procedure
+test(94) : Error A2082: Must be in segment block
+test(95) : Error A2092: PROC, MACRO or macro loop directive must precede LOCAL
+test(99) : Error A2159: INVOKE requires prototype for procedure
+test(100) : Error A2082: Must be in segment block
+test(103) : Error A2082: Must be in segment block
+test(104) : Error A2082: Must be in segment block
+test(105) : Error A2082: Must be in segment block
+test(106) : Error A2082: Must be in segment block
+test(107) : Error A2082: Must be in segment block
+test(108) : Error A2082: Must be in segment block
+test(111) : Error A2082: Must be in segment block
+test(112) : Error A2159: INVOKE requires prototype for procedure
+test(113) : Error A2082: Must be in segment block
+test(114) : Error A2159: INVOKE requires prototype for procedure
+test(116) : Error A2159: INVOKE requires prototype for procedure
+test(117) : Error A2082: Must be in segment block
+test(118) : Error A2082: Must be in segment block
+test(119) : Error A2082: Must be in segment block
+test(120) : Error A2159: INVOKE requires prototype for procedure
+test(121) : Error A2082: Must be in segment block
+test(122) : Error A2082: Must be in segment block
+test(123) : Error A2082: Must be in segment block
+test(128) : Error A2159: INVOKE requires prototype for procedure
+test(129) : Error A2082: Must be in segment block
+test(132) : Error A2159: INVOKE requires prototype for procedure
+test(133) : Error A2082: Must be in segment block
+test(134) : Error A2082: Must be in segment block
+test(136) : Error A2159: INVOKE requires prototype for procedure
+test(137) : Error A2082: Must be in segment block
+test(138) : Error A2082: Must be in segment block
+test(139) : Error A2082: Must be in segment block
+test(142) : Error A2159: INVOKE requires prototype for procedure
+test(145) : Error A2082: Must be in segment block
+test(146) : Error A2159: INVOKE requires prototype for procedure
+test(146) : Fatal error A1113: Too many errors
