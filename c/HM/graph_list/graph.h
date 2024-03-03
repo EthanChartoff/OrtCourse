@@ -16,36 +16,13 @@ struct Graph {
     Vertex **vertices;
 }typedef Graph;
 
-// Initialize graph
-Graph* InitGraph(int n);
-
-// Add an edge to the graph
-void AddEdge(Graph * graph, int x, int y, int weight);
-
-// Remove an edge from the graph
-void RemoveEdge(
-
-Graph * graph  , int x, int y);
-
-// Change the weight of an edge in the graph
-void ChangeWeight(Graph * graph, int x, int y, int weight);
-
-// Check if a vertex exists in the graph
-int HasVertex(
-
-Graph * graph, int v);
-
-// Check if an edge exists between two existing vertices
-int HasEdge(
-
-Graph * graph, int x, int y);
-
-// Add a vertex to the graph
-void AddVertex(
-
-Graph * graph , int v);
-
-// Remove a vertex from the graph
-void RemoveVertex(
-
-Graph * graph, int v);
+// Interface of our ADT Graph  (API)
+void InitGraph(Graph* g);
+void AddEdge(Graph g, int from, int to, int weight);
+void RemoveEdge(Graph g, int from, int to);
+void UpdateEdge(Graph g, int from, int to, int weight);
+void AddVertex(Graph* g, int data);
+void RemoveVertex(Graph* g, int data);
+int  HasEdge(Graph g, int from, int to);
+int  HasVertex(Graph g, int data);
+void PrintGraph(Graph g);

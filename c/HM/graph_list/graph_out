@@ -1,0 +1,37 @@
+Empty Graph:
+============
+Graph:
+  - Vertex 1: (no edges)
+  - Vertex 2: (no edges)
+  - Vertex 3: 5 (weight: 11) 
+  - Vertex 5: (no edges)
+  - Vertex 4: (no edges)
+Graph edges added.
+  - Vertex 1: 2 (weight: 7) 
+  - Vertex 2: 5 (weight: 10) 3 (weight: 9) 
+  - Vertex 3: 2 (weight: 13) 4 (weight: 12) 1 (weight: 8) 5 (weight: 11) 
+  - Vertex 5: (no edges)
+  - Vertex 4: 3 (weight: 15) 
+Now trying some bad edges
+  - Vertex 1: 2 (weight: 7) 
+  - Vertex 2: 5 (weight: 10) 3 (weight: 9) 
+  - Vertex 3: 2 (weight: 13) 4 (weight: 12) 1 (weight: 8) 5 (weight: 11) 
+  - Vertex 5: (no edges)
+  - Vertex 4: 3 (weight: 15) 
+Change weight 3->5 to 17 and print Graph again
+  - Vertex 1: 2 (weight: 7) 
+  - Vertex 2: 5 (weight: 10) 3 (weight: 9) 
+  - Vertex 3: 2 (weight: 13) 4 (weight: 12) 1 (weight: 8) 5 (weight: 17) 
+  - Vertex 5: (no edges)
+  - Vertex 4: 3 (weight: 15) 
+remove vertice and print Graph again
+  - Vertex 1: (no edges)
+  - Vertex 3: 4 (weight: 12) 1 (weight: 8) 5 (weight: 17) 
+  - Vertex 5: (no edges)
+  - Vertex 4: 3 (weight: 15) 
+removing a non existing vertice
+Print Graph last time
+  - Vertex 1: (no edges)
+  - Vertex 3: 4 (weight: 12) 1 (weight: 8) 5 (weight: 17) 
+  - Vertex 5: (no edges)
+  - Vertex 4: 3 (weight: 15) 
