@@ -84,7 +84,7 @@ void UpdateEdge(Graph g, int from, int to, int weight) {
 }
 
 void AddVertex(Graph* g, int data) {
-// Check if vertex already exists
+    // Check if vertex already exists
     if (HasVertex(*g, data)) {
         printf("Vertex already exists!\n");
         return;
