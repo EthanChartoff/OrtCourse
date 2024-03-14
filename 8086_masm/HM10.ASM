@@ -4,35 +4,15 @@
 ; --------------------------
 ; Your variables here
 ; -------------------------
+A db 'AbcDefG'
+B db 7 dup(' $')
+N db 7
 	
 .CODE
 
 ; --------------------------
 ; Procs here
 ; --------------------------
-lol PROC
-	push bp
-	mov sp, bp
-
-	mov bl, 1
-	mov dl, 10
-	mov ax, [bp + 4]
-check_mod:
-	cmp al, 10
-	jb sof
-	div dl
-	push ah
-	call lol
-
-sof:
-	cmp al, [bp + 4]
-	jb good
-	mov bl, 0
-
-good: 
-	ret 4
-
-lol ENDP
 
 start:
 	mov ax, @DATA
@@ -40,9 +20,21 @@ start:
 ; --------------------------
 ; Your code here
 ; --------------------------
-	mov ax, 34567
-	call Q2
-	
+	mov es,ax
+	cld
+	mov cl,N
+	xor ch,ch
+	mov si,offset A
+	mov di,si
+	add di,cx
+next:
+	lodsb
+	test al,32
+	loopne next
+	jnz sof
+	push si
+sof:
+
 exit:
 	mov ax, 4c00h
 	int 21h
